@@ -1,0 +1,78 @@
+@charset 'UTF-8';
+
+html,body{
+
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* <-- ESSENCIAL PRA EVITAR SCROLL LATERAL */
+      
+      
+}
+body{
+    background: linear-gradient(to top, #F06BF2, #7630D9 );
+    overflow-x: hidden;
+    
+}
+section{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+div{
+    margin: 10px;
+    
+}
+img{
+    width: 200px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829)
+}
+img:hover{
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); 
+}
+h1{
+    background-color: #79F2E6;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Cookie", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+    color: #532473;
+    margin: 30px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829);
+}
+
+p{
+    color: white;
+    font-family: "Cookie", cursive;
+    font-style: normal;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.musica{
+    background-color:   #7630D9;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829);
+    width: 500px;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829)
+   
+}
+
+.link{
+    text-decoration: none;
+}
+.musica:hover{
+    background-color:#532473;
+    transform: translateY(-5px);
+    
+}

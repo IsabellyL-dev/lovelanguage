@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isy&Eric</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="images/icons8-favorite-16.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Cookie&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Isy & Eric</h1>
+    <p>Entre quando quiser lembrar dos nossos dates.</p>
+    <p>Te adoro muito!</p>
+<section>
+    
+        <div onclick="clicar()" >
+           <img id="date1" src="images/gpt.png" alt="">
+           <p id="dateUm"></p>
+        </div>
+       <div onclick="clicar02()" >
+        <img id="date2" src="images/gpt.png" alt="">
+        <p id="dateDois"></p>
+       </div>
+       <div onclick="clicar03()">
+        <img  id="date3" src="images/gpt.png" alt="">
+        <p id="dateTres"></p>
+       </div>
+</section>
+
+<div class="musica">
+    <a class="link" href="https://youtu.be/Fd_3EkGr0-4?si=QjpK5W3J_25gPyRT"><p>Clique aqui e escute uma música que me lembra você </p></a> 
+    
+</div>
+
+   <script>
+    function clicar(){
+        var img1 = window.document.getElementById('date1')
+        var data1 = window.document.getElementById('dateUm')
+        img1.src = 'images/IMG_20250403_181849468.jpg'
+       
+        data1.innerHTML = '03/04/2025'
+    }
+
+    function clicar02(){
+        var img2 = window.document.getElementById('date2')
+        var data2 = window.document.getElementById('dateDois')
+        img2.style.width = '350px';
+        img2.style.height = '200px';
+        img2.src = 'images/IMG_20250404_190652952.jpg'
+        data2.innerHTML ='04/04/2025'
+    }
+
+    function clicar03(){
+        var img3 = window.document.getElementById('date3')
+        var data3 = window.document.getElementById('dateTres')
+        img3.src = 'images/IMG_20250407_201701976~2.jpg'
+        data3.innerHTML ='07/04/2025'
+    }
+   </script>
+</body>
+</html>
