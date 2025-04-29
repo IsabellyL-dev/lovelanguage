@@ -8,25 +8,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Isy & Eric</h1>
     <p>Entre quando quiser lembrar dos nossos dates.</p>
-    <p>Te adoro muito!</p>
+    <p>Te AMO muito!</p>
 <section>
     
         <div onclick="clicar()" >
-           <img id="date1" src="images/gpt.png" alt="">
+           <img id="date1" src="images/chatgpt.png" alt="">
            <p id="dateUm"></p>
         </div>
        <div onclick="clicar02()" >
-        <img id="date2" src="images/gpt.png" alt="">
+        <img id="date2" src="images/chatgpt.png" alt="">
         <p id="dateDois"></p>
        </div>
        <div onclick="clicar03()">
-        <img  id="date3" src="images/gpt.png" alt="">
+        <img  id="date3" src="images/chatgpt.png" alt="">
         <p id="dateTres"></p>
+       </div>
+      
+</section>
+<section id="section02">
+      <div onclick="clicar04()">
+        <img id="date4" src="images/chatgpt.png" alt="">
+        <p id="dateQuatro"></p>
+     </div>
+     <div onclick="clicar05()">
+        <img id="date5" src="images/chatgpt.png" alt="">
+         <p id="dateCinco"></p>
+       </div>
+       <div onclick="clicar06()">
+        <img id="date6" src="images/chatgpt.png" alt="">
+         <p id="dateSeis"></p>
        </div>
 </section>
 
@@ -34,31 +49,109 @@
     <a class="link" href="https://youtu.be/Fd_3EkGr0-4?si=QjpK5W3J_25gPyRT"><p>Clique aqui e escute uma música que me lembra você </p></a> 
     
 </div>
+<div class="player-musica">
+    <audio id="musica" loop>
+        <source src="sunflower.mp3" type="audio/mpeg">
+    </audio>
+    
+</div>
 
-   <script>
+
+<script>
     function clicar(){
-        var img1 = window.document.getElementById('date1')
-        var data1 = window.document.getElementById('dateUm')
-        img1.src = 'images/IMG_20250403_181849468.jpg'
-       
-        data1.innerHTML = '03/04/2025'
+        let img1 = document.getElementById('date1')
+        let data1 = document.getElementById('dateUm')
+
+        img1.classList.add('fade-out')
+
+        setTimeout(() => {
+            img1.src = 'images/IMG_20250403_181849468.jpg'
+            data1.innerHTML = '03/04/2025'
+            img1.classList.remove('fade-out')
+        }, 300)
     }
 
     function clicar02(){
-        var img2 = window.document.getElementById('date2')
-        var data2 = window.document.getElementById('dateDois')
-        img2.style.width = '350px';
-        img2.style.height = '200px';
-        img2.src = 'images/IMG_20250404_190652952.jpg'
-        data2.innerHTML ='04/04/2025'
+        let img2 = document.getElementById('date2')
+        let data2 = document.getElementById('dateDois')
+
+        img2.classList.add('fade-out')
+
+        setTimeout(() => {
+            // img2.style.width = '250px'
+            // img2.style.height = '200px'
+            img2.src = 'images/IMG_20250404_190652952.jpg'
+            data2.innerHTML = '04/04/2025'
+            img2.classList.remove('fade-out')
+        }, 300)
     }
 
     function clicar03(){
-        var img3 = window.document.getElementById('date3')
-        var data3 = window.document.getElementById('dateTres')
-        img3.src = 'images/IMG_20250407_201701976~2.jpg'
-        data3.innerHTML ='07/04/2025'
+        let img3 = document.getElementById('date3')
+        let data3 = document.getElementById('dateTres')
+
+        img3.classList.add('fade-out')
+
+        setTimeout(() => {
+            img3.src = 'images/IMG_20250407_201701976~2.jpg'
+            data3.innerHTML = '07/04/2025'
+            img3.classList.remove('fade-out')
+        }, 300)
     }
-   </script>
+
+    function clicar04(){
+        let img4 = document.getElementById('date4')
+        let data4 = document.getElementById('dateQuatro')
+
+        img4.classList.add('fade-out')
+
+        setTimeout(() => {
+            img4.src = 'images/IMG_20250412_145517_008.jpg'
+            data4.innerHTML = '12/04/2025'
+            img4.classList.remove('fade-out')
+        }, 300)
+    }
+    function clicar05(){
+    let img5 = document.getElementById('date5')
+    let data5 = document.getElementById('dateCinco')
+
+    img5.classList.add('fade-out')
+
+    setTimeout(() => {
+        img5.src = 'images/IMG-20250420-WA0019.jpg'
+        data5.innerHTML = '19/04/2025'
+        img5.classList.remove('fade-out')
+    }, 300)
+}
+
+function clicar06(){
+    let img6 = document.getElementById('date6')
+    let data6 = document.getElementById('dateSeis')
+
+    img6.classList.add('fade-out')
+
+    setTimeout(() => {
+        img6.src = 'images/IMG-20250427-WA0048.jpg'
+        data6.innerHTML = '27/04/2025'
+        img6.classList.remove('fade-out')
+    }, 300)
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+        const musica = document.getElementById('musica');
+        let tocou = false;
+
+        function tocarMusica() {
+            if (!tocou) {
+                musica.play().catch((error) => {
+                    console.log('Não conseguiu tocar a música automaticamente:', error);
+                });
+                tocou = true;
+            }
+        }
+
+        window.addEventListener('click', tocarMusica, { once: true });
+    });
+    </script>
 </body>
 </html>

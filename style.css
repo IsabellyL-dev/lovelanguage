@@ -1,78 +1,91 @@
 @charset 'UTF-8';
 
-html,body{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* <-- ESSENCIAL PRA EVITAR SCROLL LATERAL */
+}
 
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* <-- ESSENCIAL PRA EVITAR SCROLL LATERAL */
-      
-      
-}
-body{
-    background: linear-gradient(to top, #F06BF2, #7630D9 );
+body {
+    /* background: linear-gradient(to bottom, #FFB7FF, #C879FF ); */
+    background-color: #F2D5DD;
     overflow-x: hidden;
-    
 }
-section{
+
+section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
 }
 
-div{
+div {
     margin: 10px;
-    
+    max-width: 300px;
 }
-img{
-    width: 200px;
+
+img {
+    width: 260px;
     border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829)
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829);
+    opacity: 1; /* Começa 100% visível */
 }
-img:hover{
+
+/* Quando passar o mouse */
+img:hover {
     transform: translateY(-5px);
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); 
 }
-h1{
-    background-color: #79F2E6;
+
+/* Classe para fazer o fade-out */
+.fade-out {
+    opacity: 0;
+}
+
+h1 {
+    background-color: #ec98c6;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    font-family: "Cookie", cursive;
-    font-weight: 600;
-    font-style: normal;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
     font-size: 60px;
-    color: #532473;
+    color: #FBFBF2;
     margin: 30px;
     box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829);
 }
 
-p{
-    color: white;
-    font-family: "Cookie", cursive;
-    font-style: normal;
+p {
+    color: #FBFBF2;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 20px;
 }
 
-.musica{
-    background-color:   #7630D9;
+.musica {
+    background-color: #ec98c6;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829);
-    width: 500px;
+    width: 700px;
     margin: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.829)
-   
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
-.musica:hover{
-    background-color:#532473;
+
+/* Quando passa o mouse na caixa da música */
+.musica:hover {
+    background-color: #F2C4E6;
     transform: translateY(-5px);
-    
 }
+
+
+
